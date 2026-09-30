@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Phim Hoạt Hình Trẻ Em</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h2>HOẠT HÌNH KIDS</h2>
+        </div>
+        <nav class="head-link">
+            <a href="#">Trang chủ</a>
+            <a href="#">Mới cập nhật</a>
+            <a href="#">Xem nhiều nhất</a>
+            <a href="#">Thể loại</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm phim..." onkeyup="searchVideo()">
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="left-content">
+            <h3>Danh sách video</h3>
+            <div class="sort-options">
+                <button onclick="sortVideos('newest')">Mới nhất</button>
+                <button onclick="sortVideos('views')">Nhiều lượt xem</button>
+            </div>
+            <ul id="videoList">
+                <li onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Doraemon: Nobita va Nhung Ban Tinh Ca', '1.200.000 lượt xem', '2026-09-20')">
+                    Doraemon: Nobita và Những Bản Tình Ca
+                </li>
+                <li onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Conan: Tau Ngầm Sat Thu', '950.000 lượt xem', '2026-09-25')">
+                    Conan: Tàu Ngầm Sắt Thần
+                </li>
+                <li onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Pokemon: Hanh Trinh Moi', '800.000 lượt xem', '2026-09-15')">
+                    Pokemon: Hành Trình Mới
+                </li>
+                <li onclick="playVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Shin Cậu Be But Chibi', '650.000 lượt xem', '2026-09-18')">
+                    Shin Cậu Bé Bút Chibi
+                </li>
+            </ul>
+        </aside>
+
+        <main class="right-content">
+            <div class="video-wrapper">
+                <iframe id="mainPlayer" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+            <h2 id="videoTitle">Doraemon: Nobita và Những Bản Tình Ca</h2>
+            <div class="video-info">
+                <span id="videoQuality">Chất lượng: Full HD 1080p</span> | 
+                <span id="videoLang">Thuyết minh tiếng Việt</span>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 HOẠT HÌNH KIDS. Bản quyền thuộc về trang web phim hoạt hình an toàn cho trẻ em.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
